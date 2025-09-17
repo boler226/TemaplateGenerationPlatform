@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.API", "TemaplateGenerationPlatform.API\TemaplateGenerationPlatform.API.csproj", "{578CC61D-B04A-4D74-89C3-51E4959C2F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.Domain", "TemaplateGenerationPlatform.Domain\TemaplateGenerationPlatform.Domain.csproj", "{61B61D4B-19E1-4778-8674-65C6031E487B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{578CC61D-B04A-4D74-89C3-51E4959C2F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578CC61D-B04A-4D74-89C3-51E4959C2F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578CC61D-B04A-4D74-89C3-51E4959C2F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578CC61D-B04A-4D74-89C3-51E4959C2F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B61D4B-19E1-4778-8674-65C6031E487B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B61D4B-19E1-4778-8674-65C6031E487B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B61D4B-19E1-4778-8674-65C6031E487B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B61D4B-19E1-4778-8674-65C6031E487B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41475D94-A716-4F4B-B88E-B7EA16FAACBB}
+	EndGlobalSection
+EndGlobal
