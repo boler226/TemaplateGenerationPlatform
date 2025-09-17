@@ -4,10 +4,10 @@ namespace TemaplateGenerationPlatform.Domain.Interfaces.Repositories
 {
     public interface IRepository<T>
     {
-        Task<List<T>> GetAllAsync();
-        Task<T> GetByIdAsync(Guid id);
-        Task CreateAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(T entity);
+        Task<List<T>> GetAllAsync(CancellationToken cancellationToken);
+        Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+        Task CreateAsync(T entity, CancellationToken cancellationToken);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }
