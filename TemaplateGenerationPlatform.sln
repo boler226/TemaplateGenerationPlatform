@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.API", "TemaplateGenerationPlatform.API\TemaplateGenerationPlatform.API.csproj", "{578CC61D-B04A-4D74-89C3-51E4959C2F75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemaplateGenerationPlatform.API", "TemaplateGenerationPlatform.API\TemaplateGenerationPlatform.API.csproj", "{578CC61D-B04A-4D74-89C3-51E4959C2F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.Domain", "TemaplateGenerationPlatform.Domain\TemaplateGenerationPlatform.Domain.csproj", "{61B61D4B-19E1-4778-8674-65C6031E487B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemaplateGenerationPlatform.Domain", "TemaplateGenerationPlatform.Domain\TemaplateGenerationPlatform.Domain.csproj", "{61B61D4B-19E1-4778-8674-65C6031E487B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.Infrastructure", "TemaplateGenerationPlatform.Infrastructure\TemaplateGenerationPlatform.Infrastructure.csproj", "{35751608-C14C-4AC2-A604-0677AD15080E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaplateGenerationPlatform.Application", "TemaplateGenerationPlatform.Application\TemaplateGenerationPlatform.Application.csproj", "{1CE44E37-09DB-48FD-9515-497C35E4716F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{61B61D4B-19E1-4778-8674-65C6031E487B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61B61D4B-19E1-4778-8674-65C6031E487B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61B61D4B-19E1-4778-8674-65C6031E487B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35751608-C14C-4AC2-A604-0677AD15080E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35751608-C14C-4AC2-A604-0677AD15080E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35751608-C14C-4AC2-A604-0677AD15080E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35751608-C14C-4AC2-A604-0677AD15080E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE44E37-09DB-48FD-9515-497C35E4716F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE44E37-09DB-48FD-9515-497C35E4716F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE44E37-09DB-48FD-9515-497C35E4716F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE44E37-09DB-48FD-9515-497C35E4716F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
