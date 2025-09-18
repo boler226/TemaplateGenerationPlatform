@@ -1,14 +1,20 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using TemaplateGenerationPlatform.Application.Commands.Template;
+using TemaplateGenerationPlatform.Application.DTOs.Template;
 using TemaplateGenerationPlatform.Domain.Entity;
 using TemaplateGenerationPlatform.Domain.Interfaces.Repositories;
 using TemaplateGenerationPlatform.Infrastructure.DbContext;
 
 namespace TemaplateGenerationPlatform.Application.Commands.CreateTemplate
 {
-    public class CreateTemplateCommandHandler(IRepository<TemplateEntity> repository, AppDbContext context) : IRequestHandler<CreateTemplateCommand, Guid>
+    public class CreateTemplateCommandHandler(
+        IRepository<TemplateEntity> repository,
+        AppDbContext context,
+        IMapper mapper
+        ) : IRequestHandler<CreateTemplateCommand, TemplateDto>
     {
-        public async Task<Guid> Handle(CreateTemplateCommand command, CancellationToken cancellationToken)
+        public async Task<TemplateDto> Handle(CreateTemplateCommand command, CancellationToken cancellationToken)
         {
             var template = new TemplateEntity
             {
@@ -22,7 +28,7 @@ namespace TemaplateGenerationPlatform.Application.Commands.CreateTemplate
             await repository.CreateAsync(template, cancellationToken);
             await context.SaveChangesAsync(cancellationToken);
 
-            return template.Id;
+            return mapper.Map<TemplateDto>(template);
         }
     }
 }
