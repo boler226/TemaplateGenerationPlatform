@@ -18,8 +18,10 @@ namespace TemaplateGenerationPlatform.Application.Commands.GeneratePdf
 
             string html = template.HtmlContent;
 
-            foreach (var k in command.Data) 
-                html = html.Replace($"{{{{k.Key}}}}", k.Value);
+            foreach (var kv in command.Data)
+            {
+                html = html.Replace($"{{{{{kv.Key}}}}}", kv.Value);
+            }
 
             await using var page = await browser.NewPageAsync();
             await page.SetContentAsync(html);

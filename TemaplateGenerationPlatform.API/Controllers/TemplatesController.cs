@@ -19,8 +19,11 @@ namespace TemaplateGenerationPlatform.API.Controllers
             Ok(await mediator.Send(new GetAllTemplatesQuery()));
 
         [HttpPost("{id:guid}/generate")]
-        public async Task<IActionResult> Generate(Guid id, [FromBody] Dictionary<string, string> data) =>
-            Ok(await mediator.Send(new GeneratePdfCommand(id, data)));
+        public async Task<IActionResult> Generate(Guid id, [FromBody] Dictionary<string, string> data)
+        {
+            var pdfBytes = await mediator.Send(new GeneratePdfCommand(id, data));
+            return File(pdfBytes, "application/pdf", "template.pdf");
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTemplateCommand command) => 
