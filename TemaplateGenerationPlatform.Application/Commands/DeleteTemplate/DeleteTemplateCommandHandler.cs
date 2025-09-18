@@ -10,7 +10,7 @@ namespace TemaplateGenerationPlatform.Application.Commands.DeleteTemplate
         public async Task<Unit> Handle(DeleteTemplateCommand command, CancellationToken cancellationToken)
         {
             var template = await repository.GetByIdAsync(command.Id, cancellationToken)
-                ?? throw new Exception("B");
+                ?? throw new Exception("Not found");
 
             repository.Delete(template);
             await context.SaveChangesAsync(cancellationToken);

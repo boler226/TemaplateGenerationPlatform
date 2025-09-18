@@ -14,7 +14,7 @@ namespace TemaplateGenerationPlatform.Application.Commands.GeneratePdf
         public async Task<byte[]> Handle(GeneratePdfCommand command, CancellationToken cancellationToken)
         {
             var template = await repository.GetByIdAsync(command.TemplateId, cancellationToken)
-                ?? throw new Exception();
+                ?? throw new Exception("Not found");
 
             string html = template.HtmlContent;
 
